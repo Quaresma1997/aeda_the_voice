@@ -19,7 +19,7 @@ void cria_ficheiro_concorrentes()
 	ifstream fi;
 	fi.open("C:\\Users\\Rui Quaresma\\Documents\\eclipse\\the_voice_turma3\\src\\nomes.txt");
 	ofstream fo;
-	fo.open("concorrentes.txt");
+	fo.open("concorrentes.txt");hjjhhhs
 
 	while (getline(fi, line)) {
 
