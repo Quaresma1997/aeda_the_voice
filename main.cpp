@@ -27,7 +27,7 @@ int main() {
 	The_Voice TV1("Lisboa", getNumEdicao());
 
 
-
+	le_ficheiros(TV1);
 
 	//cria_ficheiros();
 

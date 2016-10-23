@@ -9,6 +9,7 @@
 #include "data.h"
 #include "fase.h"
 #include "the_voice.h"
+#include <map>
 using namespace std;
 
 class The_Voice
@@ -18,7 +19,7 @@ class The_Voice
 	vector <Apresentador *> apresentadores;
 	vector <Mentor *> mentores;
 	vector <Fase *> fases;
-	vector <Musica *> musicas;
+	map<string, vector<Musica *>> estilos_musicas;
 	string local; //local da edicao
 public:
 
@@ -27,6 +28,19 @@ public:
 
 	string getLocal() const;
 	unsigned int getID() const;
+
+	void setMusicas(string estilo_pos,Musica *m) ;
+	void setApresentadores(Apresentador *a) ;
+	void setMentores(Mentor *m) ;
+	void setConcorrentes(Concorrente *c) ;
+	void setFases(Fase *f) ;
+
+	vector <Concorrente *> getConcorrentes() const;
+	vector <Apresentador *> getApresentadores() const;
+	vector <Mentor *> getMentores() const;
+	vector <Fase *> getFases() const;
+	map<string, vector<Musica *>> getEstilos_musicas() const;
+
 
 };
 
