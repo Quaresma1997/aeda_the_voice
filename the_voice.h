@@ -11,6 +11,7 @@
 #include "the_voice.h"
 using namespace std;
 
+
 class The_Voice
 {
 	unsigned int id;
@@ -27,6 +28,8 @@ public:
 
 	string getLocal() const;
 	unsigned int getID() const;
+	template<class get_info>
+	get_info get_files_info();
 
 };
 

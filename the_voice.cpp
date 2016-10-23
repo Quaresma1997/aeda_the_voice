@@ -22,3 +22,10 @@ string The_Voice::getLocal() const
 {
 	return local;
 }
+
+
+
+get_info TheVoice::get_files_info()
+{
+
+}
