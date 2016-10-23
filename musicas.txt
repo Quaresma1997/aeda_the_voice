@@ -1,15 +1,15 @@
 Rock
 1 The Chainsmokers – Closer (Feat. Halsey) 
 2 The Weeknd – Starboy (Feat. Daft Punk) 
-3 Major Lazer – Cold Water (Feat. Justin Bieber & MØ)
+3 Major Lazer – Cold Water (Feat. Justin Bieber & MO)
 4 Ariana Grande – Side To Side (Feat. Nicki Minaj) 
 5 DJ Snake – Let Me Love You (Feat. Justin Bieber) 
-6 Fifth Harmony – That’s My Girl 
+6 Fifth Harmony – Thats My Girl 
 7 Calvin Harris – My Way 
 8 Sia – The Greatest  
 9 Drake – One Dance (Feat. Kyla & Wizkid)
 10 Calvin Harris – This Is What You Came For (Feat. Rihanna)
-11 The Chainsmokers – Don’t Let Me Down (Fet. Daya)
+11 The Chainsmokers – Dont Let Me Down (Fet. Daya)
 12 Mike Posner – I Took A Pill In Ibiza (Seeb Remix)
 Pop
 13 Shawn Mendes – Treat You Better
@@ -18,11 +18,11 @@ Pop
 16 Coldplay – Hymn For The Weekend (Seeb Remix)
 17 Martin Garrix & Bebe Rexha – In The Name Of Love 
 18 Fifth Harmony – Work From Home (Feat. Ty Dolla $ign)
-19 Kungs vs Cookin’ on 3 Burners – This Girl 
-20 Charlie Puth – We Don’t Talk Anymore (feat. Selena Gomez) 
+19 Kungs vs Cookin on 3 Burners – This Girl 
+20 Charlie Puth – We Dont Talk Anymore (feat. Selena Gomez) 
 21 Hailee Steinfeld, Grey – Starving (Feat. Zedd) 
 22 Britney Spears – Make Me… (Feat. G-Eazy) 
-23 Justin Timberlake – Cant’t Stop The Feeling!
+23 Justin Timberlake – Cant Stop The Feeling!
 24 Jonas Blue – Perfect Strangers (Feat. JP Cooper)
 Fado
 25 Lady Gaga – Perfect Illusion 
@@ -32,7 +32,7 @@ Fado
 29 Fergie – M.I.L.F. $ 
 30 Adele – Send My Love
 31 Katy Perry – Rise (Músicas Tema Olimpíadas Brasil Rio 2016) 
-32 Sucker for Pain – Lil Wayne, Wiz Khalifa & Imagine Dragons w/ Logic & Ty Dolla $ign ft X Ambassadors 
+32 Sucker for Pain – Lil Wayne, Wiz Khalifa & Imagine Dragons w/ Logic & Ty Dolla Sign ft X Ambassadors 
 33 Rihanna – Work (Feat. Drake)
 34 Shawn Mendes – Mercy 
 35 DNCE – Cake By The Ocean
@@ -51,15 +51,15 @@ Lirico
 47 Tove Lo – Cool Girl 
 48 Coldplay – Up&Up 
 Jazz
-49 Jennifer Lopez – Ain’t Your Mama
+49 Jennifer Lopez – Aint Your Mama
 50 Rihanna – Needed Me
 51 Maluma – Sin Contrato  
 52 Mike Perry – The Ocean (Feat. Shy Martin)
-53 Zara Larsson – Ain’t My Fault  
-54 Chris Brown – Grass Ain’t Greener 
+53 Zara Larsson – Aint My Fault  
+54 Chris Brown – Grass Aint Greener 
 55 Demi Lovato – Body Say 
-56 David Guetta  – This One’s For You (Feat. Zara Larsson) 
-57 Beyoncé – Sorry
+56 David Guetta  – This Ones For You (Feat. Zara Larsson) 
+57 Beyonce – Sorry
 58 OneRepublic – Kids 
 59 Ariana Grande – Dangerous Woman 
 60 Usher – No Limit (Feat. Young Thug) 
@@ -67,13 +67,13 @@ Blues
 61 Justin Timberlake – True Colors (Feat. Anna Kendrick) 
 62 Snakehips – Cruel (Feat. Zayn ) 
 63 Desiigner – Panda
-64 Ricky Martin – Vente Pa’ Ca (Feat. Maluma)  
+64 Ricky Martin – Vente Pa Ca (Feat. Maluma)  
 65 Skylar Grey – Kill For You (Feat. Eminem)  
 66 Panic! At The Disco – LA Devotee 
 67 Austin Mahone – Send It (Feat. Rich Homie Quan) 
 68 Drake – Too Good (Feat. Rihanna)
 69 Andra & Mara – Sweet Dreams
-70 Gnash – I Hate U, I Love U (Feat. Olivia O’Brien)
+70 Gnash – I Hate U, I Love U (Feat. Olivia OBrien)
 71 Kings Of Leon – Walls 
 72 Twenty One Pilots – Stressed Out
 R&B
@@ -86,7 +86,7 @@ R&B
 79 The Black Eyed Peas – #WHERESTHELOVE (Feat. The World) 
 80 Skrillex & Rick Ross – Purple Lamborghini 
 81 Green Day – Bang Bang 
-82 Beyoncé – Hold Up 
+82 Beyonce – Hold Up 
 83 Carlos Vives – La Bicicleta (Feat. Shakira) 
 84 Cheat Codes x Kris Kross Amsterdam – Sex
 85 P!nk – Just Like Fire 
