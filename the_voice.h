@@ -18,7 +18,7 @@ class The_Voice
 	vector <Apresentador *> apresentadores;
 	vector <Mentor *> mentores;
 	vector <Fase *> fases;
-	vector <Musica *> musicas;
+	vector <vector <Musica *>> estilos_musicas; // vetor em k as posicoes sao estilos em k
 	string local; //local da edicao
 public:
 
