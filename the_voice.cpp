@@ -23,16 +23,10 @@ string The_Voice::getLocal() const
 	return local;
 }
 
-void The_Voice::setEstilos(string est)
-{
-	vector <Musica *> M_aux;
-	estilos_musicas.insert(pair<string,vector <Musica *>>(est,M_aux));
 
-}
-
-void The_Voice::setEstilos_musicas(string estilo_pos,Musica *m)
+void The_Voice::setMusicas(Musica *m)
 {
-	estilos_musicas.at(estilo_pos).push_back(m);
+	musicas.push_back(m);
 }
 
 void The_Voice::setApresentadores(Apresentador *a)
@@ -70,7 +64,7 @@ vector <Fase *> The_Voice::getFases() const
 	return fases;
 }
 
-map<string, vector<Musica *>> The_Voice::getEstilos_musicas() const
+vector<Musica *> The_Voice::getMusicas() const
 {
-	return estilos_musicas;
+	return musicas;
 }

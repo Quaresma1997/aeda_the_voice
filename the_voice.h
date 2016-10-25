@@ -18,7 +18,7 @@ class The_Voice
 	vector <Apresentador *> apresentadores;
 	vector <Mentor *> mentores;
 	vector <Fase *> fases;
-	map<string, vector<Musica *>> estilos_musicas;
+	vector <Musica *> musicas;
 	string local; //local da edicao
 public:
 
@@ -28,8 +28,8 @@ public:
 	string getLocal() const;
 	unsigned int getID() const;
 
-	void setEstilos(string est);
-	void setEstilos_musicas(string estilo_pos,Musica *m) ;
+
+	void setMusicas(Musica *m) ;
 	void setApresentadores(Apresentador *a) ;
 	void setMentores(Mentor *m) ;
 	void setConcorrentes(Concorrente *c) ;
@@ -39,7 +39,7 @@ public:
 	vector <Apresentador *> getApresentadores() const;
 	vector <Mentor *> getMentores() const;
 	vector <Fase *> getFases() const;
-	map<string, vector<Musica *>> getEstilos_musicas() const;
+	vector <Musica *> getMusicas() const;
 
 
 };

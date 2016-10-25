@@ -5,6 +5,7 @@
 #include <fstream>
 #include "const.h"
 #include "func.h"
+#include <new>
 using namespace std;
 
 //menus
@@ -44,11 +45,20 @@ unsigned int getNumEdicao()
 
 //uteis
 
-void trim_strings(string &str)
+string trim_strings(string word)
 {
-	size_t first = str.find_first_not_of(' ');
-	size_t last = str.find_last_not_of(' ');
-	str.substr(first, (last-first+1));
+	int i = 0, j;
+	while (word.at(i) == ' ')
+	{
+		word = word.substr(1);
+	}
+	j = word.size() - 1;
+	while (word.at(j) == ' ')
+	{
+		word = word.substr(0, j);
+		j--;
+	}
+	return word;
 }
 
 //trabalhar com ficheiros
@@ -75,7 +85,7 @@ void le_ficheiro_musicas(The_Voice &TV)
 	ifstream fi("musicas.txt");
 	string line;
 	char c;
-	int estilo_id=-1;
+
 
 	while (getline(fi, line))
 	{
@@ -87,9 +97,6 @@ void le_ficheiro_musicas(The_Voice &TV)
 			is.str(line);
 
 			is>>estilo;
-			TV.setEstilos(estilo);
-
-
 		}
 		else
 		{
@@ -101,11 +108,12 @@ void le_ficheiro_musicas(The_Voice &TV)
 			getline(is, nome);
 
 
-			Musica *m(trim_strings(nome), estilo);
-			TV.setEstilos_musicas(estilo,m);
+			Musica *m=new Musica(trim_strings(nome), estilo);
+			TV.setMusicas(m);
 		}
 
 	}
+	fi.close();
 
 }
 
@@ -116,6 +124,7 @@ void le_ficheiro_apresentadores(The_Voice &TV)
 
 	while (getline(fi, line))
 	{
+
 		istringstream is;
 		int id;
 		char h1;
@@ -126,13 +135,14 @@ void le_ficheiro_apresentadores(The_Voice &TV)
 		getline(is, nome, '(');
 		is >> idade>>h1;
 		getline(is, loc, ')');
-Apresentador *h(12, "kaka", "vila");
-		Apresentador *a(idade, trim_strings(nome), trim_strings(loc));
+		Apresentador *a=new Apresentador(idade, trim_strings(nome), trim_strings(loc));
 		TV.setApresentadores(a);
 
 
 
+
 	}
+	fi.close();
 }
 
 void le_ficheiro_mentores(The_Voice &TV)
@@ -159,12 +169,13 @@ void le_ficheiro_mentores(The_Voice &TV)
 		estilos.push_back(est2);
 		estilos.push_back(est3);
 
-		Mentor *m(idade, nome, loc,num_participacoes,num_ed_ganhas, estilos );
+		Mentor *m=new Mentor(idade, nome, loc,num_participacoes,num_ed_ganhas, estilos );
 		TV.setMentores(m);
 
 
 
 	}
+	fi.close();
 }
 
 void le_ficheiro_concorrentes(The_Voice &TV)
@@ -187,12 +198,16 @@ void le_ficheiro_concorrentes(The_Voice &TV)
 		getline(is, loc, ')');
 		getline(is, musica);
 
-		Concorrente *c(idade, nome, loc, musica);
+		//m=find_musica
+		//Concorrente *c=new Concorrente(idade, nome, loc, m);
+		Musica *m=new Musica("The Chainsmokers – Closer (Feat. Halsey)", "Rock" );
+		Concorrente *c=new Concorrente(idade, nome, loc,m );
 		TV.setConcorrentes(c);
 
 
 
 	}
+	fi.close();
 }
 void cria_ficheiro_concorrentes()
 {

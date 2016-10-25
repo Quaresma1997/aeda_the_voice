@@ -28,10 +28,7 @@ int main() {
 
 	le_ficheiros(TV1);
 
-	cout <<"Ap: "<<TV1.getApresentadores().at(0)<<endl;
-	cout <<"Mt: "<<TV1.getMentores().at(0)<<endl;
-	cout <<"Co: "<<TV1.getConcorrentes().at(0)<<endl;
-	cout <<"Mu: "<<TV1.getEstilos_musicas().at("Rock").at(0)<<endl;
+
 	//cria_ficheiros();
 
 	return 0;
