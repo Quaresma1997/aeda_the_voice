@@ -8,7 +8,7 @@
 #include "musicas.h"
 #include "data.h"
 #include "fase.h"
-#include "the_voice.h"
+#include <map>
 using namespace std;
 
 class The_Voice
@@ -27,6 +27,20 @@ public:
 
 	string getLocal() const;
 	unsigned int getID() const;
+
+
+	void setMusicas(Musica *m) ;
+	void setApresentadores(Apresentador *a) ;
+	void setMentores(Mentor *m) ;
+	void setConcorrentes(Concorrente *c) ;
+	void setFases(Fase *f) ;
+
+	vector <Concorrente *> getConcorrentes() const;
+	vector <Apresentador *> getApresentadores() const;
+	vector <Mentor *> getMentores() const;
+	vector <Fase *> getFases() const;
+	vector <Musica *> getMusicas() const;
+
 
 };
 

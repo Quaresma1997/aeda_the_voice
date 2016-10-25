@@ -22,3 +22,49 @@ string The_Voice::getLocal() const
 {
 	return local;
 }
+
+
+void The_Voice::setMusicas(Musica *m)
+{
+	musicas.push_back(m);
+}
+
+void The_Voice::setApresentadores(Apresentador *a)
+{
+	apresentadores.push_back(a);
+}
+
+void The_Voice::setMentores(Mentor *m)
+{
+	mentores.push_back(m);
+}
+
+void The_Voice::setConcorrentes(Concorrente *c)
+{
+	concorrentes.push_back(c);
+}
+
+vector <Concorrente *> The_Voice::getConcorrentes() const
+{
+	return concorrentes;
+}
+
+vector <Apresentador *> The_Voice::getApresentadores() const
+{
+	return apresentadores;
+}
+
+vector <Mentor *> The_Voice::getMentores() const
+{
+	return mentores;
+}
+
+vector <Fase *> The_Voice::getFases() const
+{
+	return fases;
+}
+
+vector<Musica *> The_Voice::getMusicas() const
+{
+	return musicas;
+}

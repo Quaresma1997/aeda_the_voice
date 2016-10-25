@@ -11,7 +11,6 @@
 #include "const.h"
 #include "func.h"
 #include <fstream>
-#include "the_voice.h"
 using namespace std;
 
 
@@ -27,6 +26,7 @@ int main() {
 	The_Voice TV1("Lisboa", getNumEdicao());
 
 
+	le_ficheiros(TV1);
 
 
 	//cria_ficheiros();
