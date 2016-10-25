@@ -44,11 +44,11 @@ unsigned int getNumEdicao()
 
 //uteis
 
-string trim_strings(string &str)
+void trim_strings(string &str)
 {
 	size_t first = str.find_first_not_of(' ');
 	size_t last = str.find_last_not_of(' ');
-	return str.substr(first, (last-first+1));
+	str.substr(first, (last-first+1));
 }
 
 //trabalhar com ficheiros
@@ -61,11 +61,17 @@ bool file_is_empty(ifstream& pFile)
 void le_ficheiros(The_Voice &TV)
 {
 	le_ficheiro_musicas(TV);
+	le_ficheiro_apresentadores(TV);
+	le_ficheiro_mentores(TV);
+	le_ficheiro_concorrentes(TV);
+
+
+	//Controlo de erros ficheiro existe?
 }
 void le_ficheiro_musicas(The_Voice &TV)
 {
+	string estilo;
 
-	vector <string> estilos={"Rock", "Pop", "Fado", "Lirico", "Jazz", "Blues", "R&B", "Reggae"};
 	ifstream fi("musicas.txt");
 	string line;
 	char c;
@@ -78,7 +84,11 @@ void le_ficheiro_musicas(The_Voice &TV)
 		is >>c;
 		if(!isdigit(c))
 		{
-			estilo_id++;
+			is.str(line);
+
+			is>>estilo;
+			TV.setEstilos(estilo);
+
 
 		}
 		else
@@ -90,14 +100,100 @@ void le_ficheiro_musicas(The_Voice &TV)
 			is>>id;
 			getline(is, nome);
 
-			Musica *m(nome, estilos.at(estilo_id));
-			TV.setMusicas(estilos.at(estilo_id),m);
+
+			Musica *m(trim_strings(nome), estilo);
+			TV.setEstilos_musicas(estilo,m);
 		}
 
 	}
 
 }
 
+void le_ficheiro_apresentadores(The_Voice &TV)
+{
+	ifstream fi("apresentadores.txt");
+	string line;
+
+	while (getline(fi, line))
+	{
+		istringstream is;
+		int id;
+		char h1;
+		unsigned int idade;
+		string nome, loc;
+		is.str(line);
+		is >>id;
+		getline(is, nome, '(');
+		is >> idade>>h1;
+		getline(is, loc, ')');
+Apresentador *h(12, "kaka", "vila");
+		Apresentador *a(idade, trim_strings(nome), trim_strings(loc));
+		TV.setApresentadores(a);
+
+
+
+	}
+}
+
+void le_ficheiro_mentores(The_Voice &TV)
+{
+	ifstream fi("mentores.txt");
+	string line;
+
+	while (getline(fi, line))
+	{
+		istringstream is;
+		int id, num_participacoes, num_ed_ganhas;
+		char h1;
+		unsigned int idade;
+		string nome, loc, est1, est2, est3;
+		vector <string> estilos;
+		is.str(line);
+		is >>id;
+		getline(is, nome, '(');
+		is >> idade>>h1;
+		getline(is, loc, ')');
+		is>>num_participacoes>>num_ed_ganhas;
+		is>>est1>>est2>>est3;
+		estilos.push_back(est1);
+		estilos.push_back(est2);
+		estilos.push_back(est3);
+
+		Mentor *m(idade, nome, loc,num_participacoes,num_ed_ganhas, estilos );
+		TV.setMentores(m);
+
+
+
+	}
+}
+
+void le_ficheiro_concorrentes(The_Voice &TV)
+{
+	ifstream fi("concorrentes.txt");
+	string line;
+
+	while (getline(fi, line))
+	{
+		istringstream is;
+		int id;
+		char h1;
+		unsigned int idade;
+		string nome, loc, musica;
+
+		is.str(line);
+		is >>id;
+		getline(is, nome, '(');
+		is >> idade>>h1;
+		getline(is, loc, ')');
+		getline(is, musica);
+
+		Concorrente *c(idade, nome, loc, musica);
+		TV.setConcorrentes(c);
+
+
+
+	}
+}
 void cria_ficheiro_concorrentes()
 {
 	/*string line;

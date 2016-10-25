@@ -8,7 +8,6 @@
 #include "musicas.h"
 #include "data.h"
 #include "fase.h"
-#include "the_voice.h"
 #include <map>
 using namespace std;
 
@@ -29,7 +28,8 @@ public:
 	string getLocal() const;
 	unsigned int getID() const;
 
-	void setMusicas(string estilo_pos,Musica *m) ;
+	void setEstilos(string est);
+	void setEstilos_musicas(string estilo_pos,Musica *m) ;
 	void setApresentadores(Apresentador *a) ;
 	void setMentores(Mentor *m) ;
 	void setConcorrentes(Concorrente *c) ;
