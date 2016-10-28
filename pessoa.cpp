@@ -44,14 +44,15 @@ Concorrente::Concorrente(unsigned int ida, string nm, string loc, Musica *mus):P
 	musicas.push_back(mus);
 
 	qualidade=-1;
-	Em_Prova=false;
+	Em_Prova=-1;
 	estilo="";
+	equipa=0;
 
 	id=ID_CONCORRENTE_GERAL;
 	ID_CONCORRENTE_GERAL++;
 }
 
-void Concorrente::setEm_Prova(bool em_p)
+void Concorrente::setEm_Prova(int em_p)
 {
 	Em_Prova=em_p;
 }
@@ -71,12 +72,17 @@ void Concorrente::setMusicas(Musica *mus)
 	musicas.push_back(mus);
 }
 
+void Concorrente::setEquipa(int e)
+{
+	equipa=e;
+}
+
 vector<Musica *> Concorrente::getMusicas() const
 {
 	return musicas;
 }
 
-bool Concorrente::getEm_Prova() const
+int Concorrente::getEm_Prova() const
 {
 	return Em_Prova;
 }
@@ -89,6 +95,11 @@ string Concorrente::getEstilo() const
 int Concorrente::getQualidade() const
 {
 	return qualidade;
+}
+
+int Concorrente::getEquipa() const
+{
+	return equipa;
 }
 
 //Mentor : Pessoa
@@ -116,6 +127,15 @@ vector<string> Mentor::getEstilos() const
 	return estilos;
 }
 
+vector <Concorrente *> Mentor::getConcorrentes_na_equipa() const
+{
+	return concorrentes_na_equipa;
+}
+
+void Mentor::setConcorrentes_na_equipa(Concorrente *c)
+{
+	concorrentes_na_equipa.push_back(c);
+}
 //Apresentador : Pessoa
 
 int Apresentador::ID_APRESENTADOR_GERAL=1; //id geral, para dar um novo id sequencial a cada apresentador

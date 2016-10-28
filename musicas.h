@@ -21,7 +21,7 @@ public:
 	unsigned int getId() const;
 	string getNome() const;
 	string getEstilo() const;
-
+	bool operator == (const Musica &m1) const;
 	//GET INFORMACAO
 
 };

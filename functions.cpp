@@ -6,6 +6,7 @@
 #include "const.h"
 #include "func.h"
 #include <new>
+
 using namespace std;
 
 //menus
@@ -186,7 +187,7 @@ void le_ficheiro_concorrentes(The_Voice &TV)
 	while (getline(fi, line))
 	{
 		istringstream is;
-		int id;
+		int id, pos_Musica;
 		char h1;
 		unsigned int idade;
 		string nome, loc, musica;
@@ -198,10 +199,13 @@ void le_ficheiro_concorrentes(The_Voice &TV)
 		getline(is, loc, ')');
 		getline(is, musica);
 
-		//m=find_musica
-		//Concorrente *c=new Concorrente(idade, nome, loc, m);
-		Musica *m=new Musica("The Chainsmokers – Closer (Feat. Halsey)", "Rock" );
-		Concorrente *c=new Concorrente(idade, nome, loc,m );
+
+
+		Musica *m_aux=new Musica(musica, "" );
+		pos_Musica=sequentialSearch(TV.getMusicas(), m_aux);
+		Concorrente *c=new Concorrente(idade, nome, loc,TV.getMusicas().at(pos_Musica));
+		c->setEstilo(TV.getMusicas().at(pos_Musica)->getEstilo());
+		c->setQualidade(rand() % 4 +1);
 		TV.setConcorrentes(c);
 
 

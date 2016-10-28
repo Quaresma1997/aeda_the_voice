@@ -8,6 +8,7 @@
 #include "musicas.h"
 #include "data.h"
 #include "fase.h"
+#include "sequentialSearch.h"
 #include <map>
 using namespace std;
 

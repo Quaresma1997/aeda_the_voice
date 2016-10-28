@@ -32,3 +32,8 @@ string Musica::getEstilo() const
 {
 	return estilo;
 }
+
+bool Musica::operator == (const Musica &m1) const
+{
+	return nome==m1.nome;
+}

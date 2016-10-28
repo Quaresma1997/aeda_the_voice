@@ -35,4 +35,16 @@ public:
 
 };
 
+class Prova_cega: public Fase
+{
+	vector<vector <int>> cadeiras_viraram_cada_concorrente;
+
+public:
+	Prova_cega(string nm, int qts, Data* dat);
+	~Prova_cega(){};
+	vector<vector <int>> getCadeiras() const;
+
+	void setCadeiras(vector <int> cad);
+};
+
 #endif

@@ -8,7 +8,6 @@
 #include "fase.h"
 using namespace std;
 
-
 //Fase
 
 unsigned int Fase::ID_FASE_GERAL=1;
@@ -41,5 +40,17 @@ vector <Concorrente *> Fase::getConcorrentes() const
 void Fase::setConcorrentes(Concorrente *c)
 {
 	concorrentes.push_back(c);
+}
+
+//Prova_cega : Fase
+
+vector<vector <int>> Prova_cega::getCadeiras() const
+{
+	return cadeiras_viraram_cada_concorrente;
+}
+
+void Prova_cega::setCadeiras(vector <int> cad)
+{
+	cadeiras_viraram_cada_concorrente.push_back(cad);
 }
 
